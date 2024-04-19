@@ -4,7 +4,7 @@ package com.swe.Survey_Spring.service;
  * SurveyService.java:
  * This file contains the service layer logic for processing survey data.
  * It encapsulates the business logic for handling survey operations such as validation, transformation, and interaction with the repository.
- * Team Details: Srini Jammula, Aditya Gottipati, Aradhya Jain, Swabhi Papneja
+ * Team Details: Srini Jammula, Tejeswar Sadanandan, Aditya Gottipati, Sruthi Sivasamy
  */
 
 import com.swe.Survey_Spring.entity.Survey;

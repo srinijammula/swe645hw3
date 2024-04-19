@@ -4,7 +4,7 @@ package com.swe.Survey_Spring.controller;
  * SurveyController.java:
  * This file contains the controller logic for handling HTTP requests related to survey data.
  * It defines endpoints and maps them to appropriate methods for processing incoming requests and returning responses.
- * Team Details: Srini Jammula, Aditya Gottipati, Aradhya Jain, Swabhi Papneja
+ * Team Details: Srini Jammula, Tejeswar Sadanandan, Aditya Gottipati, Sruthi Sivasamy
  */
 
 import com.swe.Survey_Spring.entity.Survey;

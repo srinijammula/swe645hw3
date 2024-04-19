@@ -4,7 +4,7 @@ package com.swe.Survey_Spring.entity;
  * Entity.java:
  * This file defines the entity class representing survey data.
  * It typically contains attributes corresponding to the survey form fields and methods for accessing and manipulating this data.
- * Team Details: Srini Jammula, Aditya Gottipati, Aradhya Jain, Swabhi Papneja
+ * Team Details: Srini Jammula, Tejeswar Sadanandan, Aditya Gottipati, Sruthi Sivasamy
  */
 
 import jakarta.persistence.*;
