@@ -9,7 +9,7 @@ pipeline{
 				script{
 					checkout scm
 					sh 'rm -rf *.jar'
-					sh 'mvn clean install'
+					sh 'maven clean install'
 					sh "echo ${DOCKERHUB_PASS} | docker login -u srinijammula --password-stdin"
 					sh 'docker build -t srinijammula/hw3demo1 .'
 				}
