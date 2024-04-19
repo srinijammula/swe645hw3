@@ -9,7 +9,7 @@ pipeline{
 				script{
 					checkout scm
 					sh 'rm -rf *.jar'
-					sh 'jar -cvf Survey_Spring-0.0.1-SNAPSHOT.jar .'
+					sh 'mvn clean install'
 					sh "echo ${DOCKERHUB_PASS} | docker login -u srinijammula --password-stdin"
 					sh 'docker build -t srinijammula/hw3demo1 .'
 				}
