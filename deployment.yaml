@@ -6,21 +6,15 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      app: hw3demo1
+      app: asg
   template:
     metadata:
       labels:
-        app: hw3demo1
+        app: asg
     spec:
       containers:
-      - name: hw3demo1
-        image: srinijammula/hw3demo1
+      - name: asg
+        image: srinijammula/asg3
         ports:
         - containerPort: 8080
-        resources:
-            requests:
-              cpu: "100m"
-              memory: "200Mi"
-            limits:
-              cpu: "200m"
-              memory: "400Mi"
+        
