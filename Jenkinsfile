@@ -4,12 +4,11 @@ pipeline{
 		DOCKERHUB_PASS = "University@123"
 	}
 	stages{
-		stage("Generating the Build for SWE645 student survey form"){
+		stage("Generating the Build for SWE645 student survey api"){
 			steps{
 				script{
 					checkout scm
-					sh 'rm -rf *.jar'
-					sh 'maven clean install'
+					sh "mvn clean install -DskipTests"
 					sh "echo ${DOCKERHUB_PASS} | docker login -u srinijammula --password-stdin"
 					sh 'docker build -t srinijammula/hw3demo1 .'
 				}
