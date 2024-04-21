@@ -8,7 +8,7 @@ pipeline{
 			steps{
 				script{
 					checkout scm
-					sh "mvn clean install -DskipTests"
+					sh '/opt/apache-maven-3.9.6/bin/mvn clean install -DskipTests'
 					sh "echo ${DOCKERHUB_PASS} | docker login -u srinijammula --password-stdin"
 					sh 'docker build -t srinijammula/hw3demo1 .'
 				}
