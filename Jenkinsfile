@@ -10,14 +10,14 @@ pipeline{
 					checkout scm
 					sh '/opt/apache-maven-3.9.6/bin/mvn clean install -DskipTests'
 					sh "echo ${DOCKERHUB_PASS} | docker login -u srinijammula --password-stdin"
-					sh 'docker build -t srinijammula/hw3demo1 .'
+					sh 'docker build -t srinijammula/asg3 .'
 				}
 			}
 		}
 		stage("Pushing image to docker"){
 			steps{
 				script{
-					sh 'docker push srinijammula/hw3demo1'
+					sh 'docker push srinijammula/asg3'
 				}
 			}
 		}
