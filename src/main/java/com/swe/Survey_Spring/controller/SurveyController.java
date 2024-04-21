@@ -22,17 +22,17 @@ import java.util.List;
 public class SurveyController {
     private final SurveyService surveyService;
 
-    @PostMapping("/survey")
+    @PostMapping("/studentsurvey")
     public Survey postSurvey(@RequestBody Survey survey){
         return surveyService.postSurvey(survey);
     }
 
-    @GetMapping("/surveys")
+    @GetMapping("/studentsurveys")
     private List<Survey> getAllSurvey() {
         return surveyService.getAllSurvey();
     }
 
-    @GetMapping("/survey/{id}")
+    @GetMapping("/studentsurvey/{id}")
     public ResponseEntity<Survey> getSurveyById(@PathVariable Long id) {
         Survey survey = surveyService.getSurveyById(id);
         if (survey == null) {
@@ -41,7 +41,7 @@ public class SurveyController {
         return ResponseEntity.ok(survey);
     }
 
-    @PutMapping("/survey/{id}")
+    @PutMapping("/studentsurvey/{id}")
     public ResponseEntity<Survey> updateSurvey(@PathVariable Long id, @RequestBody Survey survey) {
         Survey existingSurvey = surveyService.getSurveyById(id);
         if (existingSurvey == null) {
@@ -70,7 +70,7 @@ public class SurveyController {
         return ResponseEntity.ok(updatedSurvey);
     }
 
-    @DeleteMapping("/survey/{id}")
+    @DeleteMapping("/studentsurvey/{id}")
     public ResponseEntity<?> deleteSurvey(@PathVariable Long id) {
         Survey existingSurvey = surveyService.getSurveyById(id);
         if (existingSurvey == null) {
