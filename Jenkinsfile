@@ -27,7 +27,7 @@ pipeline{
 				
 					String kubeconfigPath = '/var/lib/jenkins/.kube/config'
             
-					sh "kubectl --kubeconfig=${kubeconfigPath} apply -f deployment.yaml --validate=false"
+					sh "kubectl --kubeconfig=${kubeconfigPath} apply -f deployment.yaml"
 					sh "kubectl --kubeconfig=${kubeconfigPath} apply -f service.yaml"
 
 					// Force a new rollout for the deployment
